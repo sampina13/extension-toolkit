@@ -19,7 +19,8 @@
   width: 5rem;
 }
 
-.word {
+.start,
+.dest {
   font-family: monospace;
   font-size: 1.5rem;
 }
