@@ -1,7 +1,7 @@
 # Extension examples
 
-This repository contains a series of Chrome extension examples. To load an
-unpacked extension in Chrome, you must enable developer mode
+This repository contains three Chrome extension examples. To load an unpacked
+extension in Chrome, you must enable developer mode
 ([instructions here](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/)).
 The provided examples are:
 
@@ -9,10 +9,9 @@ The provided examples are:
   console
 - `blocker` - lets you position rectangles to block annoying elements on the
   page
-- `themer` - lets you customize the color themes of your page
 - `e-nator` - converts normal e into spooky e
 
-## Useful Functions
+<!-- ## Useful Functions
 
 ### Adding an event listener
 
@@ -70,7 +69,7 @@ changes to its popup checkbox, and send a message with its current value:
 listen("change", "#enable", (e) =>
   sendMessageToContentScript({ replace: e.target.checked })
 );
-```
+``` -->
 
 <!-- ### Listening for a message from a popup
 
