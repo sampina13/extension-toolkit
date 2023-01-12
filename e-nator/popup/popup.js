@@ -1,3 +1,7 @@
+function listen(eventType, selector, callback) {
+  document.querySelector(selector).addEventListener(eventType, callback);
+}
+
 function openOptionsPage(optionsHTML) {
   if (chrome.runtime.openOptionsPage) {
     chrome.runtime.openOptionsPage();
@@ -16,14 +20,11 @@ async function sendMessageToContentScript(message) {
   console.log(response);
 }
 
-function listen(eventType, selector, callback) {
-  document.querySelector(selector).addEventListener(eventType, callback);
-}
-
 listen("click", "#open-options", (e) =>
   openOptionsPage("../options/options.html")
 );
 
 listen("change", "#enable", (e) =>
+  // Send a message to the content script with the current value of the checkbox
   sendMessageToContentScript({ replace: e.target.checked })
 );

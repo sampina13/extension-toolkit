@@ -31,7 +31,7 @@
 
 .rule {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }

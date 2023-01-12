@@ -10,7 +10,7 @@ The provided examples are:
 - `blocker` - lets you position rectangles to block annoying elements on the
   page
 - `themer` - lets you customize the color themes of your page
-- `e-nator` - converts every normal e into a sppoky e
+- `e-nator` - converts normal e into spooky e
 
 ## Useful Functions
 
@@ -72,7 +72,7 @@ listen("change", "#enable", (e) =>
 );
 ```
 
-### Listening for a message from a popup
+<!-- ### Listening for a message from a popup
 
 ```js
 function listenForMessage(key, value, callback, responseMessage) {
@@ -101,4 +101,4 @@ listenForMessage("replace", true, () => walkNodes(document.body, rep), {
 listenForMessage("replace", false, () => walkNodes(document.body, flip(rep)), {
   res: "received",
 });
-```
+``` -->
