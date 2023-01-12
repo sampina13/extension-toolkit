@@ -26,7 +26,7 @@ function makeRule(start, dest) {
 }
 
 function restoreRules() {
-  chrome.storage.sync.get("rules", function (items) {
+  chrome.storage.sync.get({ rules: rules }, function (items) {
     rules = items.rules;
     for (const entry of Object.entries(items.rules)) {
       makeRule(entry[0], entry[1]);
