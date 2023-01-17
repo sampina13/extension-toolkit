@@ -1,6 +1,6 @@
 # Extension examples
 
-This repository contains three Chrome extension examples. To load an unpacked
+This repository contains Chrome extension examples. To load an unpacked
 extension in Chrome, you must enable developer mode
 ([instructions here](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/)).
 The provided examples are:
