@@ -5,10 +5,6 @@ body {
   user-select: none;
 }
 
-button {
-  width: 100%;
-}
-
 input[type="color"] {
   width: 100%;
 }
@@ -18,10 +14,5 @@ input[type="color"] {
   background-color: blueviolet;
   color: white;
   width: 100%;
-  padding: 5px;
-}
-
-.popup-content {
-  font-family: monospace;
   padding: 5px;
 }

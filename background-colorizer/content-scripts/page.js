@@ -15,3 +15,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // Use the sendResponse function passed in by chrome to send a response
   sendResponse(`the color has been changed from ${oldColor} to ${newColor}!`);
 });
+
+// Get the value of "color" out of Chrome storage. This will run when the page
+// is loaded.
+chrome.storage.sync.get("color", (result) => {
+  // This will console.log whatever is in chrome storage when the page is loaded
+  console.log(result); // This will console.log { color: "#ffffff" } (or whatever the stored color was)
+  // set the body background color
+  document.body.style.backgroundColor = result.color;
+});
