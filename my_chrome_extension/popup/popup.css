@@ -18,13 +18,14 @@ body {
 }
 
 button {
+    display: flex;
     padding: 10px 20px;
     margin: 10px;
     border-radius: 5px;
     border: none;
     font-size: 18px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(235, 12, 12);
     cursor: pointer;
     transition: all 0.3s ease;
 }
