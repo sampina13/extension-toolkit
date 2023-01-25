@@ -10,7 +10,7 @@
 
     },
     "permissions": [
-        "tabs"
+        "activeTab"
     ],
     "content_scripts": [
         {
@@ -18,7 +18,7 @@
                 "*://*/*"
             ],
             "js": [
-                "content-scripts/script.js"
+                "popup.js"
             ],
             "css": [
                 "content-scripts/scores.css"
