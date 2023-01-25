@@ -1,4 +1,4 @@
-async function fetchData() {
+async function fetchData(league) {
     const options = {
         method: 'GET',
         headers: {
@@ -7,7 +7,7 @@ async function fetchData() {
         }
     };
     
-    const res = await fetch('https://football98.p.rapidapi.com/premierleague/results', options)
+    const res = await fetch('https://football98.p.rapidapi.com/${league}/results', options)
     const record = await res.json()
 
     console.log('record', record)
@@ -16,4 +16,15 @@ async function fetchData() {
 
     document.getElementById('scores').innerHTML = myList[0].map(x => `<li>${x.awayTeam + ' ' + x.awayTeamScore + ' vs ' + x.homeTeam + ' ' + x.homeTeamScore}</li>`).join('');
 }
-fetchData();
+
+// Add a message listener that sets the value of "replace"
+chrome.runtime.onMessage.addListener((request) => {
+    if (request["buttonName"] == "button1") {
+        fetchData("premierleague");
+    } else if (request["buttonName"] == "button2") {
+        fetchData("laliga");
+    } else {
+        fetchData("seriea");
+    }
+  });
+  

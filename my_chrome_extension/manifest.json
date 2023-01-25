@@ -5,7 +5,7 @@
     "version": "1.0",
     "author": "Samuel Pina Villagrana",
     "action": {
-        "default_popup": "index.html",
+        "default_popup": "popup.html",
         "default_title": "Football Matchday Results"
 
     }
