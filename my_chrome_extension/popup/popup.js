@@ -11,7 +11,7 @@ button3.addEventListener("click", (e) => updateContentScript(button3));
 async function updateContentScript(buttonName) {
   // Sends a message to the content script with an object that has the
   // current value of the boolean (whether to get scores)
-  const message = { buttonName: buttonName, getScores: getScores };
+  const message = { buttonName: buttonName };
   const [tab] = await chrome.tabs.query({
     active: true,
     lastFocusedWindow: true,

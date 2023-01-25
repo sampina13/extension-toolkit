@@ -14,17 +14,14 @@ async function fetchData(league) {
     
     let myList = Object.values(record[0]);
 
-    document.getElementById('scores').innerHTML = myList[0].map(x => `<li>${x.awayTeam + ' ' + x.awayTeamScore + ' vs ' + x.homeTeam + ' ' + x.homeTeamScore}</li>`).join('');
+    document.getElementById("popup-content").innerHTML = myList[0].map(x => `<li>${x.awayTeam + ' ' + x.awayTeamScore + ' vs ' + x.homeTeam + ' ' + x.homeTeamScore}</li>`).join('');
 }
+
 
 // Add a message listener that sets the value of "replace"
 chrome.runtime.onMessage.addListener((request) => {
-    if (request["buttonName"] == "button1") {
-        fetchData("premierleague");
-    } else if (request["buttonName"] == "button2") {
-        fetchData("laliga");
-    } else {
-        fetchData("seriea");
+    const league = leagueMappings[request.buttonName];
+    if (league) {
+        fetchData(league);
     }
-  });
-  
+});

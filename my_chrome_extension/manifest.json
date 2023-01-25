@@ -4,11 +4,14 @@
     "Description": "Chrome browser extension that shows final football scoresheets for a chosen pro-league",
     "version": "1.0",
     "author": "Samuel Pina Villagrana",
-    "action": {
-        "default_popup": "popup.html",
+    "browser_action": {
+        "default_popup": "popup/popup.html",
         "default_title": "Football Matchday Results"
 
     },
+    "permissions": [
+        "tabs"
+    ],
     "content_scripts": [
         {
             "matches": [
@@ -17,8 +20,8 @@
             "js": [
                 "content-scripts/script.js"
             ],
-            "html": [
-                "content-scripts/scoresheet.html"
+            "css": [
+                "content-scripts/scores.css"
             ]
         }
     ]
