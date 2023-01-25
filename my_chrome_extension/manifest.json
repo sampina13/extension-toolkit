@@ -8,5 +8,18 @@
         "default_popup": "popup.html",
         "default_title": "Football Matchday Results"
 
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content-scripts/script.js"
+            ],
+            "html": [
+                "content-scripts/scoresheet.html"
+            ]
+        }
+    ]
 }
