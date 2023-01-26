@@ -11,10 +11,8 @@ async function fetchPrem() {
         }
     };
 
-    fetch('https://football98.p.rapidapi.com/premierleague/results', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+    const res = await fetch('https://football98.p.rapidapi.com/premierleague/results', options)
+    const record = await res.json()
 }
 
 async function fetchlaLiga() {
@@ -26,10 +24,8 @@ async function fetchlaLiga() {
         }
     };
 
-    fetch('https://football98.p.rapidapi.com/laliga/results', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+    const res = await fetch('https://football98.p.rapidapi.com/laliga/results', options)
+    const record = await res.json()
 }
 
 async function fetchSeriea() {
@@ -41,12 +37,10 @@ async function fetchSeriea() {
         }
     };
 
-    fetch('https://football98.p.rapidapi.com/seriea/results', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+    const res = await fetch('https://football98.p.rapidapi.com/seriea/results', options)
+    const record = await res.json()
 }
 
-button1.addEventListener("click", (e) => fetchPrem);
-button2.addEventListener("click", (e) => fetchlaLiga);
-button3.addEventListener("click", (e) => fetchSeriea);
+button1.addEventListener("click", (e) => fetchPrem());
+button2.addEventListener("click", (e) => fetchlaLiga());
+button3.addEventListener("click", (e) => fetchSeriea());
